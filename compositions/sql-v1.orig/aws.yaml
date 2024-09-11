@@ -21,8 +21,6 @@ spec:
           cidrBlock: 11.0.0.0/16
           enableDnsSupport: true
           enableDnsHostnames: true
-        providerConfigRef:
-          name: default
   - name: subnet-a
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -38,8 +36,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: subnet-b
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -55,8 +51,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: subnet-c
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -72,8 +66,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: subnetgroup
     base:
       apiVersion: rds.aws.upbound.io/v1beta1
@@ -85,8 +77,6 @@ spec:
           subnetIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: gateway
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -97,8 +87,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: routeTable
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -109,8 +97,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: route
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -125,8 +111,6 @@ spec:
           gatewayIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: mainRouteTableAssociation
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -140,8 +124,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: routeTableAssociation1a
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -155,8 +137,6 @@ spec:
           subnetIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: routeTableAssociation1b
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -170,8 +150,6 @@ spec:
           subnetIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: routeTableAssociation1c
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -185,8 +163,6 @@ spec:
           subnetIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: securityGroup
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -198,8 +174,6 @@ spec:
           vpcIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: securityGroupRule
     base:
       apiVersion: ec2.aws.upbound.io/v1beta1
@@ -217,8 +191,6 @@ spec:
           securityGroupIdSelector:
             matchLabels:
               crossplane.io/composite: my-db
-        providerConfigRef:
-          name: default
   - name: rdsinstance
     base:
       apiVersion: rds.aws.upbound.io/v1beta1
@@ -243,5 +215,3 @@ spec:
             namespace: crossplane-system
             key: password
             name: my-db-password
-        providerConfigRef:
-          name: default

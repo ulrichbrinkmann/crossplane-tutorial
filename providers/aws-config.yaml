@@ -10,3 +10,5 @@ spec:
       namespace: crossplane-system
       name: aws-creds
       key: creds
+  assumeRoleChain:
+    - roleARN: arn:aws:iam::989661945487:role/OrganizationAccountAccessRole
